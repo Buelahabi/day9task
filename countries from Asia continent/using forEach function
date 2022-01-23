@@ -1,0 +1,28 @@
+e) Print the following details name, capital, flag using forEach function
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="script.js"></script>
+</body>
+</html>
+
+var request = new XMLHttpRequest();
+request.open("GET","https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json",true)
+request.send();
+request.onload = function(){
+    var data = JSON.parse(request.response)
+function myfunction(a){
+    return console.log(a.name,a.capital,a.flag)
+
+}
+console.log(data.forEach(myfunction))
+}
+
+
